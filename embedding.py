@@ -93,6 +93,7 @@ for epoch in range(em_ep):
         best_val_loss = val_loss
         torch.save(model.state_dict(), "./model/embeder.pth")
 losses=pd.DataFrame(losses,columns=["train_loss","val_loss"])
+losses.to_csv("./model/embeder_loss.csv")
 
 
 y_pred = []
